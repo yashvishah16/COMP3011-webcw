@@ -1,0 +1,25 @@
+<form method="post" action="http://127.0.0.1:9000/shahair/make-booking/">
+    {% csrf_token %}
+    <input type="text" name="legal_name" placeholder="Legal Name" required><br>
+    <input type="text" name="first_name" placeholder="First Name"><br>
+    <input type="text" name="last_name" placeholder="Last Name"><br>
+    <input type="date" name="date_of_birth" required><br>
+    <input type="text" name="passport_no" placeholder="Passport Number" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+    <input type="text" name="contact_no" placeholder="Contact Number"><br>
+    <input type="text" name="flight_code" placeholder="Flight Code" required><br>
+    <input type="date" name="date_of_departure" required><br>
+    <input type="text" name="class" placeholder="Class (eco/bus)" required><br>
+    <button type="submit">Make Booking</button>
+</form>
+
+<form method="post" action="http://127.0.0.1:9000/shahair/invoice/OHPU1KTJ/">
+    {% csrf_token %}
+    <input type="text" name="preferred_vendor" placeholder="Preferred Vendor" required><br>
+    <button type="submit">Create Invoice</button>
+</form>
+
+<form method="post" action="http://127.0.0.1:9000/shahair/confirm/OHPU1KTJ/">
+    {% csrf_token %}
+    <button type="submit">Confirm Invoice</button>
+</form>
